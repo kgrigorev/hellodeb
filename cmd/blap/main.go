@@ -10,7 +10,7 @@ import (
 func main() {
 	logger, _ := zap.NewProduction()
 	defer logger.Sync()
-	logger.Info("starting blap...",
+	logger.Info("starting blap ...",
 		zap.Duration("tick", 3*time.Second),
 	)
 	blap.Run()
