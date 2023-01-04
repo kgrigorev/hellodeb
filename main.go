@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"time"
+)
 
 func main() {
-	fmt.Println("Hello there")
+	log.Println("started...")
+	for range time.NewTicker(5 * time.Second).C {
+		fmt.Println("Hello there", time.Now())
+	}
 }
